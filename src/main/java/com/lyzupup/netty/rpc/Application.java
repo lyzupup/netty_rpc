@@ -22,7 +22,7 @@ public class Application {
 
     @RequestMapping("springboot")
     @ResponseBody
-    public String helloSpringBoot(){
+    public String helloSpringBoot() {
         return HELLO_SPRINGBOOT;
     }
 
