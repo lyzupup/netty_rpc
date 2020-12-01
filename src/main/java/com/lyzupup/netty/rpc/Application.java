@@ -1,7 +1,9 @@
 package com.lyzupup.netty.rpc;
 
+import org.junit.Test;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,11 +24,12 @@ public class Application {
 
     @RequestMapping("springboot")
     @ResponseBody
-    public String helloSpringBoot() {
-        return HELLO_SPRINGBOOT;
+    @Test
+    public void helloSpringBoot() {
+        System.out.println(HELLO_SPRINGBOOT);;
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        ConfigurableApplicationContext run = SpringApplication.run(Application.class, args);
     }
 }
